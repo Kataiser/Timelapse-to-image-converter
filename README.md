@@ -14,6 +14,7 @@ Note 1: it's highly recommended that the input video
 - is quite long, but probably not longer than an hour
 - has a fixed camera location and orientation
 - is 30 FPS
+
 Note 2: this uses a *massive* amount of storage, potentially hundreds of gigabytes, none of which is automatically deleted. When part 2 is done and final.png is finished, run cleanup.bat.
 
 ![Example](example.jpg)
