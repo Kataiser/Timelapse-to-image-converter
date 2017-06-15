@@ -57,9 +57,11 @@ since_start = 0
 step = floor(total_num / width)
 if step < 1:
     step = 1
-start_time = time.time()
+overall_start_time = time.time()
 
 for i in range(already_done * step, total_num, step):
+    processing_start_time = time.time()
+
     k += 1
     since_start += 1
     paths = []
@@ -96,7 +98,8 @@ for i in range(already_done * step, total_num, step):
     except:
         print("Finished! (Or maybe an error happened but whatever)")
 
-    print("Saved number " + str(k) + " (" + str(int((k / width) * 100)) + "%)")
-    print("Time since started:", round((time.time() - start_time) / 60), "mins"
+    print("Saved number " + str(k) + " (" + str(int((k / width) * 100)) + "%), "
+          "took " + str(time.time() - processing_start_time)[0:3] + " seconds")
+    print("Time since started:", round((time.time() - overall_start_time) / 60), "mins"
           + " (" + str(since_start) + " since start)")
     print('\n')
